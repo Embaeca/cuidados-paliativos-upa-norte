@@ -88,6 +88,24 @@ body {
   outline-offset: 2px;
 }
 
+/* --- REGRA GLOBAL DE TEXTOS JUSTIFICADOS --- */
+p, 
+.hero-subtitle, 
+.quote-text, 
+.prose p, 
+.section-intro-text, 
+.question-item-text, 
+.dialogue-prompt-intro, 
+.dialogue-quote, 
+.support-notice-card p, 
+.footer-quote, 
+.footer-subtext {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 /* --- BARRA FIXA SUPERIOR (HEADER & ACESSIBILIDADE) --- */
 .top-nav {
   position: sticky;
@@ -111,22 +129,71 @@ body {
 }
 
 .brand-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+  gap: 0.65rem;
+  background: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-delicate);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   text-decoration: none;
-  letter-spacing: -0.01em;
+  transition: all var(--transition-normal);
 }
 
-.brand-logo-img {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-  flex-shrink: 0;
+.brand-badge:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 3px 10px rgba(110, 138, 120, 0.12);
+  transform: translateY(-1px);
+}
+
+.brand-logo-upa {
+  height: 24px;
+  width: auto;
   display: block;
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 18px;
+  background-color: rgba(110, 138, 120, 0.28);
+  flex-shrink: 0;
+}
+
+.brand-logo-im {
+  height: 20px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.01em;
+  padding-left: 0.2rem;
+  border-left: 1px solid rgba(110, 138, 120, 0.2);
+  white-space: nowrap;
+}
+
+@media (max-width: 440px) {
+  .brand-badge {
+    padding: 0.28rem 0.6rem;
+    gap: 0.45rem;
+  }
+  .brand-logo-upa {
+    height: 20px;
+  }
+  .brand-logo-im {
+    height: 17px;
+  }
+  .brand-label {
+    font-size: 0.7rem;
+    padding-left: 0.15rem;
+  }
 }
 
 /* --- CONTAINER PRINCIPAL MOBILE-FIRST --- */
@@ -186,6 +253,10 @@ body {
   max-width: 580px;
   margin: 0 auto 0.85rem auto;
   line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* --- SEÇÃO 2: FRASE EM DESTAQUE (CITAÇÃO DE IMPACTO) --- */
@@ -231,6 +302,10 @@ body {
   font-style: italic;
   font-weight: 500;
   color: var(--text-main);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .quote-signature {
@@ -305,6 +380,10 @@ body {
   color: var(--text-main);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .prose p:last-child {
@@ -356,6 +435,10 @@ body {
   margin-bottom: 1.15rem;
   color: var(--text-main);
   line-height: 1.55;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .checklist-title {
@@ -408,6 +491,10 @@ body {
   line-height: 1.48;
   color: var(--text-main);
   font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* --- SEÇÃO 5: GUIA PRÁTICO DE COMUNICAÇÃO --- */
@@ -416,6 +503,10 @@ body {
   font-size: 0.95rem;
   color: var(--text-main);
   line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .dialogue-grid {
@@ -468,6 +559,10 @@ body {
   line-height: 1.48;
   color: var(--text-main);
   font-style: italic;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* Bloco Importante */
@@ -499,6 +594,10 @@ body {
   line-height: 1.55;
   color: var(--text-main);
   margin-bottom: 0.65rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .support-notice-card p:last-child {
@@ -510,20 +609,87 @@ body {
   margin-top: auto;
   background-color: #EEECE6;
   border-top: 1px solid rgba(110, 138, 120, 0.15);
-  padding: 2rem 0 2.5rem 0;
+  padding: 2.25rem 0 2.5rem 0;
   text-align: center;
+}
+
+/* Cartão Institucional com Logotipos em Ordem de Gestão */
+.footer-institutional-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  background-color: var(--bg-card);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-delicate);
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 1.4rem;
+}
+
+.footer-logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer-logo-role {
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.footer-logo-img {
+  display: block;
+  object-fit: contain;
+}
+
+.footer-logo-upa {
+  height: 38px;
+  width: auto;
+}
+
+.footer-card-divider {
+  width: 1px;
+  height: 44px;
+  background-color: var(--border-delicate);
+}
+
+.footer-logo-im {
+  height: 32px;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .footer-institutional-card {
+    gap: 0.85rem;
+    padding: 0.7rem 1.1rem;
+  }
+  .footer-logo-upa {
+    height: 32px;
+  }
+  .footer-logo-im {
+    height: 26px;
+  }
 }
 
 .footer-quote {
   font-size: 0.98rem;
   font-weight: 600;
   color: var(--color-primary-dark);
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
   max-width: 580px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
   padding: 0 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .footer-subtext {
@@ -533,6 +699,10 @@ body {
   margin: 0 auto;
   line-height: 1.5;
   padding: 0 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .btn-back-to-top {

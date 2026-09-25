@@ -12,9 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
 
-  <!-- Favicon & Identidade Visual -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <!-- Favicon & Identidade Visual (Instituto Imodernizar) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-192x192.png">
 
   <!-- Estilos da Aplicação -->
   <link rel="stylesheet" href="frontend/css/style.css">
@@ -24,9 +25,11 @@
   <!-- Barra Superior com Identificação Institucional -->
   <header class="top-nav" role="banner">
     <div class="top-nav-inner">
-      <a href="#inicio" class="brand-badge" aria-label="UPA Norte - Cuidados Paliativos">
-        <img src="assets/favicon.svg" alt="Logo Cuidados Paliativos" class="brand-logo-img" width="24" height="24">
-        <span>UPA Norte &bull; Acolhimento</span>
+      <a href="#inicio" class="brand-badge" aria-label="UPA Norte e Instituto Imodernizar - Cuidados Paliativos">
+        <img src="assets/logo_upa.jpg" alt="Logo UPA Norte" class="brand-logo-upa">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <img src="assets/logo_imodernizar.png" alt="Logo Instituto Imodernizar" class="brand-logo-im">
+        <span class="brand-label">Cuidados Paliativos</span>
       </a>
     </div>
   </header>
@@ -278,11 +281,24 @@
         <span>Voltar ao topo</span>
       </button>
 
+      <!-- Identificação Institucional e Parceria de Gestão -->
+      <div class="footer-institutional-card" aria-label="Identificação Institucional: UPA Norte e Instituto Imodernizar">
+        <div class="footer-logo-block">
+          <span class="footer-logo-role">Unidade</span>
+          <img src="assets/logo_upa.jpg" alt="Logo UPA Norte" class="footer-logo-img footer-logo-upa">
+        </div>
+        <div class="footer-card-divider" aria-hidden="true"></div>
+        <div class="footer-logo-block">
+          <span class="footer-logo-role">Gestão</span>
+          <img src="assets/logo_imodernizar.png" alt="Logo Instituto Imodernizar" class="footer-logo-img footer-logo-im">
+        </div>
+      </div>
+
       <p class="footer-quote">
         “Estamos aqui para cuidar de quem você ama com todo respeito, afeto e dedicação técnica. Converse sempre com a nossa equipe.”
       </p>
       <p class="footer-subtext">
-        Unidade de Pronto Atendimento (UPA Norte) &bull; Guia Informativo Digital de Cuidados Paliativos
+        Unidade de Pronto Atendimento (UPA Norte) &bull; Gestão: Instituto Imodernizar &bull; Guia Informativo Digital de Cuidados Paliativos
       </p>
     </div>
   </footer>
